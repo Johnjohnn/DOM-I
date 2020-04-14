@@ -56,4 +56,37 @@ button.textContent = "get started";
 
 // main site  
 const mainContent = document.querySelector('.top-content');
-mainContent.textContent = siteContent["main-content"]["about-content"];
+mainContent.textContent = siteContent["main-content"]["about-content"]; 
+
+const servHeader = document.querySelector('.bottom-content h4');
+servHeader.textContent = siteContent['main-content'] ['services-h4'];
+
+const servCont = document.querySelector('.bottom-content p');
+servCont.textContent = siteContent['main-content'] ['services-content'];
+
+const proHeader = document.querySelector('.bottom-content div:nth-child(2) h4');
+proHeader.textContent = siteContent['main-content'] ['product-h4'];
+
+const proCont = document.querySelector('.bottom-content div:nth-child(2) p');
+proCont.textContent = siteContent['main-content'] ['product-content'];
+
+const visHeader = document.querySelector('.bottom-content div:last-child h4');
+visHeader.textContent = siteContent['main-content'] ['vision-h4'];
+
+const visCont = document.querySelector('.bottom-content div:last-child p');
+visCont.textContent = siteContent['main-content'] ['vision-content'];
+
+const contHeader = document.querySelector('.contact h4');
+contHeader.textContent = siteContent.contact['contact-h4'];
+
+const contAddress = document.querySelector('.contact p:nth-of-type(1)');
+contAddress.textContent = siteContent.contact.address;
+console.log(contAddress);
+const contPhone = document.querySelector('.contact p:nth-child(3)');
+contPhone.textContent = siteContent.contact.phone;
+
+const contEmail = document.querySelector('.contact p:last-child');
+contEmail.textContent = siteContent.contact.email;
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
