@@ -36,6 +36,19 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+//navbar
+const navbar = document.querySelectorAll('a')
+navbar.forEach((value, i) => value.textContent = siteContent.nav[`nav-item-${i + 1}`])
+navbar.forEach(element => {element.style.color = 'olive'})
+const newNavItem = document.createElement('a');
+newNavItem.textContent = 'Learn More';
+newNavItem.style.color = 'olive';
+const newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Hello';
+newNavItem2.style.color = 'olive';
+const addNavItem = document.querySelector('nav');
+addNavItem.append(newNavItem, newNavItem2);
+
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -54,9 +67,24 @@ const button = document.querySelector('button');
 button.textContent = "get started";
 
 
+
+
 // main site  
-const mainContent = document.querySelector('.top-content');
-mainContent.textContent = siteContent["main-content"]["about-content"]; 
+const featuresHeader = document.querySelector('.top-content h4');
+featuresHeader.textContent = siteContent['main-content'] ['features-h4'];
+
+const featuresCont = document.querySelector('.top-content p');
+featuresCont.textContent = siteContent["main-content"]['features-content'];
+
+const aboutHeader = document.querySelector('.top-content div:last-child h4');
+aboutHeader.textContent = siteContent["main-content"]["about-h4"];
+
+const aboutCont = document.querySelector('.top-content div:last-child p');
+aboutCont.textContent = siteContent['main-content']['about-content'];
+
+const midImg = document.querySelector('#middle-img');
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
 
 const servHeader = document.querySelector('.bottom-content h4');
 servHeader.textContent = siteContent['main-content'] ['services-h4'];
